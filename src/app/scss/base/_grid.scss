@@ -1,0 +1,48 @@
+.row {
+    max-width: $width;
+    //  background-color: red;
+    margin: 0 auto;
+
+    // &:not(:last-child) {
+    //     margin-bottom: $spaces;
+    // }
+    [class^='row__'] {
+        background-color: yellow;
+        float: left;
+        color: rebeccapurple;
+
+        &:not(:last-child) {
+            margin-right: $spaces;
+        }
+    }
+
+    &__1of2 {
+        width: calc((100% - #{$spaces}) / 2);
+        margin-bottom: $spaces;
+    }
+
+    &__1of3 {
+        width: calc((100% - (2 * #{$spaces})) / 3);
+        margin-bottom: $spaces;
+    }
+
+    &__1of4 {
+        width: calc((100% - (3 * #{$spaces})) / 4);
+        margin-bottom: $spaces;
+    }
+
+    &__2of3 {
+        width: calc(2 * ((100% - (2 * #{$spaces})) / 3) + #{$spaces});
+        margin-bottom: $spaces;
+    }
+
+    &__2of4 {
+        width: calc(2 * ((100% - (3 * #{$spaces})) / 4) + #{$spaces});
+        margin-bottom: $spaces;
+    }
+
+    &__3of4 {
+        width: calc(3 * ((100% - (3 * #{$spaces})) / 4) + 2 * #{$spaces});
+        margin-bottom: $spaces;
+    }
+}

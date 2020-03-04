@@ -1,7 +1,6 @@
-$green-light:#7ed56f;
-$green-dark:#28b485;
-$gray-dark:#777;
-$white:#fff;
+@import '../app/scss/base/animations';
+@import '../app/scss/abstracts/variables';
+@import '../app/scss/base/grid';
 
 .header {
     position: relative;
@@ -13,146 +12,98 @@ $white:#fff;
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 35px;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
 }
 
-.logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.logo {
-    height: 35px;
-}
-
-.header-container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-}
-
-.header-text {
+.heading-text {
     color: $white;
     text-transform: uppercase;
     margin-bottom: 5rem;
-}
 
-.first-header {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: move-left 1s ease-out;
-}
-
-.secound-header {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.4rem;
-    animation: move-right 1s ease-out;
-}
-
-@keyframes move-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem)
+    &--first {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation: move-left 1s ease-out;
     }
 
-    75% {
-        transform: translateX(1rem)
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0)
+    &--secound {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.4rem;
+        animation: move-right 1s ease-out;
     }
 }
 
-@keyframes move-right {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem)
+.btn {
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.2rem 3rem;
+        border-radius: 10rem;
+        display: inline-block;
+        transition: all 0.4s;
+        backface-visibility: hidden;
+        position: relative;
+        font-size: 1.5rem;
     }
 
-    75% {
-        transform: translateX(-1rem)
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 1.5rem rgba($black, 0.3);
+
+        &::after {
+            opacity: 0;
+            transform: scaleX(1.4) scaleY(1.6);
+        }
     }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0)
-    }
-}
-
-.btn:link,
-.btn:visited {
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 1.2rem 3rem;
-    border-radius: 10rem;
-    display: inline-block;
-    transition: all 0.4s;
-    backface-visibility: hidden;
-    position: relative;
-    font-size: 1.5rem;
-}
-
-.btn:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
-}
-
-.btn:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-
-}
-
-.btn-header {
-
-    color: $gray-dark;
-    background-color: $white;
-    animation: move-bottom 1s ease;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    top: 0;
-    left: 0;
-    position: absolute;
-    transition: all 0.4s;
-    z-index: -1;
-}
-
-.btn-header::after {
-    background-color: $white;
-}
-
-.btn:hover::after {
-    opacity: 0;
-    transform: scaleX(1.4) scaleY(1.6);
-}
-
-@keyframes move-bottom {
-    0% {
-        opacity: 0;
-        transform: translateY(10rem)
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba($black, 0.3);
     }
 
-    25% {
-        opacity: 0;
-        transform: translateY(7.5rem)
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        top: 0;
+        left: 0;
+        position: absolute;
+        transition: all 0.4s;
+        z-index: -1;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0)
+    &--header {
+        color: $gray-dark;
+        background-color: $white;
+        animation: move-bottom 1s ease;
+
+        &::after {
+            background-color: $white;
+        }
     }
 }
