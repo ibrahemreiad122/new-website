@@ -7,9 +7,7 @@
     //     margin-bottom: $spaces;
     // }
     [class^='row__'] {
-        background-color: yellow;
         float: left;
-        color: rebeccapurple;
 
         &:not(:last-child) {
             margin-right: $spaces;
