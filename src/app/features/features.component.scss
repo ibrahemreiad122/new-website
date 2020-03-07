@@ -1,0 +1,45 @@
+@import '../../../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../scss/abstracts/variables';
+@import '../scss/base/grid';
+@import '../scss/base/utility';
+@import '../scss/base/text';
+
+.features-section {
+    padding: 20rem 0;
+    background-image:
+        linear-gradient(to right bottom,
+            rgba($green-light, 0.8),
+            rgba($green-dark, 0.8)), url(../../assets/img/nat-4.jpg);
+    background-size: cover;
+    transform: skewY(-5deg);
+    overflow: auto;
+    margin-top: -7rem;
+
+    &>* {
+        transform: skewY(5deg);
+        backface-visibility: hidden;
+    }
+}
+
+.features-box {
+    background-color: rgba($white, 0.8);
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
+    transition: all 0.3s;
+    backface-visibility: hidden;
+
+    &__icon {
+        font-size: 6.5rem;
+        background-image: linear-gradient(to right, $green-light, $green-dark);
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    &:hover {
+        transform: translateY(-1.2rem) scale(1.03);
+    }
+}
