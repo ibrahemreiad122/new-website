@@ -32,11 +32,12 @@
     backface-visibility: hidden;
 
     &__icon {
-        font-size: 6.5rem;
+        font-size: 6rem;
         background-image: linear-gradient(to right, $green-light, $green-dark);
         background-clip: text;
         color: transparent;
         display: inline-block;
+        font-weight: lighter;
     }
 
     &:hover {

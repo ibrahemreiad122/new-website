@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/scss/abstracts/variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,7 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'lato', 'Bellota', sans-serif;
     font-weight: 400;
     /*font-size: 16px;*/
     line-height: 1.7;
