@@ -3,6 +3,10 @@
     //  background-color: red;
     margin: 0 auto;
 
+    &:not(:last-child) {
+        margin-bottom: $spaces*1.5;
+    }
+
     // &:not(:last-child) {
     //     margin-bottom: $spaces;
     // }

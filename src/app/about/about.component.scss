@@ -2,6 +2,7 @@
 @import '../scss/base/grid';
 @import '../scss/base/utility';
 @import '../scss/base/text';
+@import '../scss/base/btn';
 
 .section-about {
     background-color: $gray-light-1;
@@ -16,32 +17,6 @@
 
     &:not(:last-child) {
         margin-bottom: 2rem;
-    }
-}
-
-.btn-text {
-
-    &:link,
-    &:visited {
-        font-size: $master-font-size;
-        text-decoration: none;
-        color: $green-dark;
-        display: inline-block;
-        border-bottom: 1px solid $green-dark;
-        padding: 3px;
-        transition: all 0.3s;
-    }
-
-    &:hover {
-        background-color: $green-dark;
-        color: $white;
-        box-shadow: 0 1rem 2rem rgba($black, 0.2);
-        transform: translateY(-2px);
-    }
-
-    &:active {
-        box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
-        transform: translateY(0);
     }
 }
 

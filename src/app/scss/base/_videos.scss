@@ -1,0 +1,16 @@
+.video {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.15;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

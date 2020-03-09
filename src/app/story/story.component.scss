@@ -1,0 +1,72 @@
+@import '../scss/abstracts/variables';
+@import '../scss/base/utility';
+@import '../scss/base/grid';
+@import '../scss/base/text';
+@import '../scss/base/btn';
+@import '../scss/base/videos';
+
+.section-story {
+    padding: 10rem 0;
+    position: relative;
+}
+
+.story {
+    margin: 0 auto;
+    width: 75%;
+    padding: 6rem;
+    padding-left: 9rem;
+    box-shadow: 0 3rem 5rem rgba($black, 0.1);
+    border-radius: 3px;
+    background-color: rgba($white, 0.6);
+    font-size: $master-font-size;
+    transform: skewX(-12deg);
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        float: left;
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+        transform: translateX(-3rem) skewX(12deg);
+    }
+
+    &__img {
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden !important;
+        transition: all 0.5s;
+    }
+
+    &__text {
+        transform: skewX(12deg);
+        backface-visibility: hidden;
+    }
+
+    &__caption {
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        color: $white;
+        font-size: 1.7rem;
+        position: absolute;
+        text-transform: uppercase;
+        transform: translate(-50%, 20%);
+        opacity: 0;
+        backface-visibility: hidden;
+        transition: all 0.5s;
+    }
+
+    &:hover &__caption {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}
