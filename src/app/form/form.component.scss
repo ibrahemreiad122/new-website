@@ -1,0 +1,76 @@
+@import '../scss/abstracts/variables';
+@import '../scss/base/grid';
+@import '../scss/base/text';
+@import '../scss/base/btn';
+@import '../scss/base/utility';
+@import '../scss/base/animations';
+
+.book_section {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $green-light, $green-dark);
+}
+
+.book {
+    height: 50rem;
+    background-image: linear-gradient(105deg, rgba($white, 0.9)0%,
+            rgba($white, 0.9)50%, transparent 50%),
+        url(../../assets/img/nat-10.jpg);
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 3.5rem rgba($black, 0.2);
+    background-size: cover;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}
+
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        transition: all 0.3s;
+    }
+
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        transform: translateY(-4rem);
+        visibility: hidden;
+    }
+
+    &__input {
+        display: block;
+        font-family: inherit;
+        font-size: 1.5rem;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        width: 90%;
+        border-radius: 3px;
+        background-color: rgba($white, 0.5);
+        border: none;
+        border-bottom: 2px solid transparent;
+        transition: all 0.5s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($black, 0.1);
+            border-bottom: 2px solid $green-light;
+        }
+
+        &:focus:invalid {
+            border-bottom: 2px solid $tomato;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $gray-darker;
+        }
+    }
+
+}

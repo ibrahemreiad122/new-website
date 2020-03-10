@@ -1,5 +1,6 @@
 .btn {
 
+    &,
     &:link,
     &:visited {
         text-decoration: none;
@@ -11,6 +12,11 @@
         backface-visibility: hidden;
         position: relative;
         font-size: 1.5rem;
+
+
+
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -23,8 +29,10 @@
         }
     }
 
-    &:active {
+    &:active,
+    :focus {
         transform: translateY(-0.1rem);
+        //outline: none;
         box-shadow: 0 0.5rem 1rem rgba($black, 0.3);
     }
 
