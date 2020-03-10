@@ -8,6 +8,8 @@ import { FeaturesComponent } from './features/features.component';
 import { ToursComponent } from './tours/tours.component';
 import { StoryComponent } from './story/story.component';
 import { FormComponent } from './form/form.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormComponent } from './form/form.component';
     FeaturesComponent,
     ToursComponent,
     StoryComponent,
-    FormComponent
+    FormComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
