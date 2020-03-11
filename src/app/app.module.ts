@@ -10,6 +10,7 @@ import { StoryComponent } from './story/story.component';
 import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './header/header.component';
     StoryComponent,
     FormComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
