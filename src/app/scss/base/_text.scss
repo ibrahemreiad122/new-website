@@ -1,9 +1,24 @@
 @import '../abstracts/variables';
+@import '../abstracts/mixins';
 
 .small-heading {
     font-size: $master-font-size;
-    font-weight: 700;
+    font-weight: 100;
     text-transform: uppercase;
+    color: $gray-black-1;
+
+
+    @include responsive(phone) {
+        font-size: $phone-font-size;
+    }
+
+    @include responsive(sm-tab) {
+        font-size: $sm-tab-font-size;
+    }
+
+    @include responsive(lg-tab) {
+        font-size: $lg-tab-font-size;
+    }
 }
 
 .heading-secound {
@@ -16,6 +31,18 @@
     color: transparent;
     transition: all .3s;
     backface-visibility: hidden;
+
+    @include responsive(phone) {
+        font-size: 2.5rem;
+    }
+
+    @include responsive(sm-tab) {
+        font-size: 3rem;
+    }
+
+    @include responsive(lg-tab) {
+        font-size: 3.25rem;
+    }
 
     &:hover {
         transform: skewY(2deg) skewX(10deg) scale(1.1);

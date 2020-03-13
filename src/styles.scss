@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app/scss/abstracts/variables';
+@import './app/scss/abstracts/mixins';
 
 * {
     margin: 0;
@@ -8,7 +9,19 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 62.5%;
+
+    @include responsive(phone) {
+        font-size: 45%;
+    }
+
+    @include responsive(sm-tab) {
+        font-size: 50%;
+    }
+
+    @include responsive(lg-tab) {
+        font-size: 56.5%;
+    }
 }
 
 body {
@@ -17,5 +30,18 @@ body {
     /*font-size: 16px;*/
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    @include responsive(lg-desktop) {
+        padding: 6rem;
+    }
+
+    @include responsive(sm-tab) {
+        padding: 0;
+    }
+
+    @include responsive(phone) {
+        padding: 0;
+    }
+
 }

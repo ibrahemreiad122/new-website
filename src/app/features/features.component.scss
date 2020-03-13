@@ -15,6 +15,14 @@
     overflow: auto;
     margin-top: -7rem;
 
+    @include responsive(phone) {
+        padding: 10rem 0;
+    }
+
+    @include responsive(sm-tab) {
+        padding: 10rem 0;
+    }
+
     &>* {
         transform: skewY(5deg);
         backface-visibility: hidden;
@@ -30,6 +38,21 @@
     box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
     transition: all 0.3s;
     backface-visibility: hidden;
+
+    @include responsive(phone) {
+
+        margin: 0 auto;
+        width: 65%;
+        padding: 2rem;
+        height: 26rem;
+    }
+
+    @include responsive(sm-tab) {
+        width: 65%;
+        margin: 0 auto;
+        padding: 2rem;
+        height: 26rem;
+    }
 
     &__icon {
         font-size: 6rem;

@@ -1,0 +1,31 @@
+@mixin responsive($type) {
+    @if $type==phone {
+        @media (max-width: 37.5em) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $type==sm-tab {
+        @media (min-width: 37.5em) and (max-width: 56.25em) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $type==lg-tab {
+        @media (min-width:56.25) and (max-width: 75em) {
+            @content
+        }
+    }
+
+    ;
+
+    @if $type==lg-desktop {
+        @media (min-width: 112.5em) {
+            @content
+        }
+    }
+}

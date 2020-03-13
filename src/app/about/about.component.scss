@@ -10,10 +10,34 @@
     padding-bottom: 15rem;
     margin-top: -20vh;
     overflow: auto;
+
+    @include responsive(phone) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        padding-bottom: 22rem;
+    }
+
+    @include responsive(sm-tab) {
+        padding-left: 9rem;
+        padding-right: 9rem;
+        padding-bottom: 27rem;
+    }
 }
 
 .paragraph {
     font-size: $master-font-size;
+
+    @include responsive(phone) {
+        font-size: $phone-font-size;
+    }
+
+    @include responsive(sm-tab) {
+        font-size: $sm-tab-font-size;
+    }
+
+    @include responsive(lg-tab) {
+        font-size: $lg-tab-font-size;
+    }
 
     &:not(:last-child) {
         margin-bottom: 2rem;
@@ -32,25 +56,65 @@
         outline-offset: 1rem;
         transition: all 0.3s;
 
+        @include responsive(phone) {
+            width: 40%;
+        }
+
+        @include responsive(sm-tab) {
+            width: 50%;
+        }
+
         &--1 {
             left: 0;
             top: -2rem;
+
+            @include responsive(phone) {
+                left: 0;
+                top: -2rem;
+            }
+
+            @include responsive(sm-tab) {
+                left: 0;
+                top: -2rem;
+            }
         }
 
         &--2 {
             right: 0;
             top: 2rem;
+
+            @include responsive(phone) {
+                left: 20rem;
+                top: -6rem;
+                z-index: 2;
+            }
+
+            @include responsive(sm-tab) {
+                left: 25rem;
+                top: -6rem;
+                z-index: 2;
+            }
         }
 
         &--3 {
             left: 20%;
             top: 10rem;
+
+            @include responsive(phone) {
+                left: 40rem;
+                top: -2rem;
+            }
+
+            @include responsive(sm-tab) {
+                left: 50rem;
+                top: -2rem;
+            }
         }
 
         &:hover {
             transform: scale(1.1) translateY(-0.5rem);
             box-shadow: 0 2.5rem 4rem rgba($black, 0.5);
-            z-index: 2;
+            z-index: 3;
             outline: 0.5rem solid $green-dark;
         }
     }

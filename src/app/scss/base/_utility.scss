@@ -1,19 +1,49 @@
+@import '../abstracts/mixins';
+
 .center-text {
     text-align: center;
 }
 
 .m-b-6 {
     margin-bottom: 6rem;
+
+    @include responsive(phone) {
+        margin-bottom: 4rem
+    }
+
+    @include responsive(sm-tab) {
+        margin-bottom: 4.5rem;
+    }
 }
 
 .m-b-4 {
     margin-bottom: 4rem;
+
+    // @include responsive(phone) {
+    //     margin-bottom: 2rem
+    // }
+
+    // @include responsive(sm-tab) {
+    //     margin-bottom: 3rem;
+    // }
 }
 
 .m-b-2 {
     margin-bottom: 2rem;
+
+    // @include responsive(phone) {
+    //     margin-bottom: 1rem
+    // }
+
+    // @include responsive(sm-tab) {
+    //     margin-bottom: 1.5rem;
+    // }
 }
 
 .m-b-15 {
     margin-bottom: 1.5rem;
+
+    // @include responsive(phone) {
+    //     margin-bottom: 1rem
+    // }
 }
