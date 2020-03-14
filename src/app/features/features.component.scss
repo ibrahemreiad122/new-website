@@ -39,6 +39,14 @@
     transition: all 0.3s;
     backface-visibility: hidden;
 
+    @include responsive(sm-phone) {
+
+        margin: 0 auto;
+        width: 85%;
+        padding: 2rem;
+        height: 26rem;
+    }
+
     @include responsive(phone) {
 
         margin: 0 auto;
@@ -53,6 +61,8 @@
         padding: 2rem;
         height: 26rem;
     }
+
+    @if expr {}
 
     &__icon {
         font-size: 6rem;

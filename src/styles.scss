@@ -11,6 +11,10 @@
 html {
     font-size: 62.5%;
 
+    @include responsive(sm-phone) {
+        font-size: 45%;
+    }
+
     @include responsive(phone) {
         font-size: 45%;
     }
@@ -41,6 +45,10 @@ body {
     }
 
     @include responsive(phone) {
+        padding: 0;
+    }
+
+    @include responsive(sm-phone) {
         padding: 0;
     }
 

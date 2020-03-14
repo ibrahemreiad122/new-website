@@ -11,6 +11,12 @@
     margin-top: -20vh;
     overflow: auto;
 
+    @include responsive(sm-phone) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+        padding-bottom: 22rem;
+    }
+
     @include responsive(phone) {
         padding-left: 6rem;
         padding-right: 6rem;
@@ -26,6 +32,11 @@
 
 .paragraph {
     font-size: $master-font-size;
+
+
+    @include responsive(sm-phone) {
+        font-size: $phone-font-size;
+    }
 
     @include responsive(phone) {
         font-size: $phone-font-size;
@@ -56,6 +67,11 @@
         outline-offset: 1rem;
         transition: all 0.3s;
 
+
+        @include responsive(sm-phone) {
+            width: 37.5%;
+        }
+
         @include responsive(phone) {
             width: 40%;
         }
@@ -67,6 +83,11 @@
         &--1 {
             left: 0;
             top: -2rem;
+
+            @include responsive(sm-phone) {
+                left: 0;
+                top: -2rem;
+            }
 
             @include responsive(phone) {
                 left: 0;
@@ -82,6 +103,13 @@
         &--2 {
             right: 0;
             top: 2rem;
+
+
+            @include responsive(sm-phone) {
+                left: 12.5rem;
+                top: -3rem;
+                z-index: 2;
+            }
 
             @include responsive(phone) {
                 left: 20rem;
@@ -99,6 +127,12 @@
         &--3 {
             left: 20%;
             top: 10rem;
+
+
+            @include responsive(sm-phone) {
+                left: 25rem;
+                top: -2rem;
+            }
 
             @include responsive(phone) {
                 left: 40rem;

@@ -7,6 +7,10 @@
 .m-b-6 {
     margin-bottom: 6rem;
 
+    @include responsive(sm-phone) {
+        margin-bottom: 4rem
+    }
+
     @include responsive(phone) {
         margin-bottom: 4rem
     }

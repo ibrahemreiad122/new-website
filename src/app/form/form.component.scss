@@ -8,6 +8,18 @@
 .book_section {
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $green-light, $green-dark);
+
+    @include responsive(sm-phone) {
+        padding: 15rem 3rem 15rem 3rem;
+    }
+
+    @include responsive(phone) {
+        padding: 15rem 6rem 15rem 6rem;
+    }
+
+    @include responsive(sm-tab) {
+        padding: 15rem 12rem 15rem 12rem;
+    }
 }
 
 .book {
@@ -19,9 +31,39 @@
     box-shadow: 0 1.5rem 3.5rem rgba($black, 0.2);
     background-size: cover;
 
+    @include responsive(sm-phone) {
+        background-image: linear-gradient(rgba($white, 0.9)0%,
+                rgba($white, 0.9)100%),
+            url(../../assets/img/nat-10.jpg);
+    }
+
+    @include responsive(phone) {
+        background-image: linear-gradient(rgba($white, 0.9)0%,
+                rgba($white, 0.9)100%),
+            url(../../assets/img/nat-10.jpg);
+    }
+
+    @include responsive(sm-tab) {
+        background-image: linear-gradient(rgba($white, 0.9)0%,
+                rgba($white, 0.9)100%),
+            url(../../assets/img/nat-10.jpg);
+    }
+
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include responsive(sm-phone) {
+            width: 100%;
+        }
+
+        @include responsive(phone) {
+            width: 100%;
+        }
+
+        @include responsive(sm-tab) {
+            width: 100%;
+        }
     }
 }
 

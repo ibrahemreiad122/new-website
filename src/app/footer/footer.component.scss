@@ -5,9 +5,45 @@
 
 .footer {
     background-color: $gray-black;
-    padding: 5rem 0 15rem 0;
+    padding: 10rem 0;
     font-size: 1.4rem;
     color: $gray-light-1;
+
+
+    @include responsive(sm-phone) {
+        padding: 8rem 0;
+        height: 60rem;
+        text-align: center;
+    }
+
+    @include responsive(phone) {
+        padding: 8rem 0;
+        height: 60rem;
+        text-align: center;
+    }
+
+    @include responsive(sm-tab) {
+        padding: 8rem 0;
+        height: 60rem;
+        text-align: center;
+    }
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 8rem;
+
+        @include responsive(sm-phone) {
+            margin-bottom: 6rem;
+        }
+
+        @include responsive(phone) {
+            margin-bottom: 6rem;
+        }
+
+        @include responsive(sm-tab) {
+            margin-bottom: 6rem;
+        }
+    }
 
     &__logo {
         width: 15rem;
@@ -51,12 +87,61 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include responsive(sm-phone) {
+            float: none;
+            width: 80%;
+
+        }
+
+        @include responsive(phone) {
+            float: none;
+            width: 80%;
+        }
+
+        @include responsive(sm-tab) {
+            float: none;
+            width: 80%;
+        }
+
+
     }
 
     &__navigation {
         border-top: 1px solid $gray-dark;
         padding-top: 2rem;
         display: inline-block;
+
+        @include responsive(sm-phone) {
+            width: 80%;
+            text-align: center;
+        }
+
+        @include responsive(phone) {
+            width: 80%;
+            text-align: center;
+        }
+
+        @include responsive(sm-tab) {
+            width: 80%;
+            text-align: center;
+        }
     }
 
+    &__copy--box {
+        @include responsive(sm-phone) {
+            display: flex;
+            justify-content: center;
+        }
+
+        @include responsive(phone) {
+            display: flex;
+            justify-content: center;
+        }
+
+        @include responsive(sm-tab) {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

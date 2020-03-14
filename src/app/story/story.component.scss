@@ -21,6 +21,32 @@
     font-size: $master-font-size;
     transform: skewX(-12deg);
 
+    @include responsive(sm-phone) {
+        transform: skewX(0deg);
+        width: 90%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include responsive(phone) {
+        transform: skewX(0deg);
+        width: 80%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include responsive(sm-tab) {
+        width: 90%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include responsive(lg-tab) {
+        width: 90%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -32,6 +58,22 @@
         shape-outside: circle(50% at 50% 50%);
         position: relative;
         transform: translateX(-3rem) skewX(12deg);
+
+        @include responsive(sm-phone) {
+            transform: translateX(-3rem) skewX(0deg);
+        }
+
+        @include responsive(phone) {
+            transform: translateX(-3rem) skewX(0deg);
+        }
+
+        @include responsive(sm-tab) {
+            transform: translateX(-3rem) skewX(12deg);
+        }
+
+        @include responsive(lg-tab) {
+            transform: translateX(-3rem) skewX(12deg);
+        }
     }
 
     &__img {
@@ -44,6 +86,23 @@
     &__text {
         transform: skewX(12deg);
         backface-visibility: hidden;
+
+        @include responsive(sm-phone) {
+            transform: skewX(0deg);
+        }
+
+        @include responsive(phone) {
+            transform: skewX(0deg);
+        }
+
+        @include responsive(sm-tab) {
+            transform: skewX(12deg);
+        }
+
+        @include responsive(lg-tab) {
+            transform: skewX(12deg);
+        }
+
     }
 
     &__caption {

@@ -1,6 +1,14 @@
 @mixin responsive($type) {
+    @if $type==sm-phone {
+        @media (max-width: 25em) {
+            @content
+        }
+    }
+
+    ;
+
     @if $type==phone {
-        @media (max-width: 37.5em) {
+        @media (min-width: 25em) and (max-width: 37.5em) {
             @content
         }
     }
