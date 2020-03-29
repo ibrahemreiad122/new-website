@@ -58,6 +58,13 @@
             top: 5.25rem;
             right: 5.25rem;
         }
+
+        @include responsive(lg-desktop) {
+            height: 7.5rem;
+            width: 7.5rem;
+            top: 7rem;
+            right: 7rem;
+        }
     }
 
     &__background {
@@ -98,6 +105,13 @@
             width: 5rem;
             top: 5.5rem;
             right: 5.5rem;
+        }
+
+        @include responsive(lg-desktop) {
+            height: 6.5rem;
+            width: 6.5rem;
+            top: 7.5rem;
+            right: 7.5rem;
         }
     }
 
@@ -177,6 +191,10 @@
             margin-top: 1rem;
         }
 
+        @include responsive(lg-desktop) {
+            margin-top: 3.75rem;
+        }
+
         &,
         &::before,
         &::after {
@@ -187,17 +205,18 @@
 
             @include responsive(sm-phone) {
                 width: 2rem;
-
             }
 
             @include responsive(phone) {
                 width: 2rem;
-
             }
 
             @include responsive(sm-tab) {
                 width: 3rem;
+            }
 
+            @include responsive(lg-desktop) {
+                width: 3.5rem;
             }
 
         }

@@ -11,6 +11,8 @@ import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { PopupComponent } from './popup/popup.component';
+import { HotelComponent } from './hotel/hotel.component';
+import { ProjectOneComponent } from './project-one/project-one.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PopupComponent } from './popup/popup.component';
     FormComponent,
     FooterComponent,
     HeaderComponent,
-    PopupComponent
+    PopupComponent,
+    HotelComponent,
+    ProjectOneComponent
   ],
   imports: [
     BrowserModule,
