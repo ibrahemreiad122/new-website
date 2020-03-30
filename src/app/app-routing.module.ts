@@ -3,16 +3,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { HotelComponent } from './hotel/hotel.component';
 
 import { ProjectOneComponent } from './project-one/project-one.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 const routes: Routes = [
   {
     path: "",
-    component: ProjectOneComponent
+    component: PortfolioComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "trip",
+    loadChildren: './lazy/lazy.module#LazyModule',
+    pathMatch: "full"
   },
   {
     path: 'hotel',
-    component: HotelComponent,
+    loadChildren: './lazy-two/lazy-two.module#LazyTwoModule',
     pathMatch: "full"
   }
 ];
