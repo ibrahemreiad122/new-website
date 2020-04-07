@@ -21,6 +21,11 @@ const routes: Routes = [
     path: 'hotel',
     loadChildren: './lazy-two/lazy-two.module#LazyTwoModule',
     pathMatch: "full"
+  },
+  {
+    path: 'nexter',
+    loadChildren: './lazythree/lazythree.module#LazythreeModule',
+    pathMatch: "full"
   }
 ];
 

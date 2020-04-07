@@ -23,7 +23,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   projectThree() {
-    this.router.navigate(["hotel"])
+    this.router.navigate(["nexter"])
   }
   ngOnInit() {
   }
