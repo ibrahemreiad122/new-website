@@ -14,17 +14,17 @@ const routes: Routes = [
   },
   {
     path: "trip",
-    loadChildren: './lazy/lazy.module#LazyModule',
+    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule),
     pathMatch: "full"
   },
   {
     path: 'hotel',
-    loadChildren: './lazy-two/lazy-two.module#LazyTwoModule',
+    loadChildren: () => import('./lazy-two/lazy-two.module').then(m => m.LazyTwoModule),
     pathMatch: "full"
   },
   {
     path: 'nexter',
-    loadChildren: './lazythree/lazythree.module#LazythreeModule',
+    loadChildren: () => import('./lazythree/lazythree.module').then(m => m.LazythreeModule),
     pathMatch: "full"
   }
 ];
