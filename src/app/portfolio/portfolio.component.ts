@@ -14,6 +14,8 @@ export class PortfolioComponent implements OnInit {
     document.body.style.lineHeight = "1.2"
   }
 
+  date = new Date;
+
   projectOne() {
     this.router.navigate(["hotel"])
   }

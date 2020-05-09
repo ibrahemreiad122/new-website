@@ -224,6 +224,7 @@ span:hover {
     color: #777;
     text-transform: capitalize;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 .projects-info {
@@ -274,7 +275,7 @@ span:hover {
     background-color: orange;
     border: 3px solid orange;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    color: #777;
+    color: #555;
     padding: 0.5rem 0.8rem;
     font-size: 1.5rem;
 }
@@ -306,14 +307,28 @@ span:hover {
 }
 
 .project-data p {
-    color: #444;
+    color: #555;
+    font-family: Helvetica;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.contact {
+footer {
     background-color: #f7b4d8;
-    height: 30rem;
+}
+
+footer h1 {
+    font-size: 5rem;
+    color: #777;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 3rem;
+    font-family: Arial, sans-serif;
+}
+
+.contact {
+
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -322,6 +337,7 @@ span:hover {
 
 .contact img {
     width: 6rem;
+
 }
 
 .contact img:hover {
@@ -332,6 +348,8 @@ span:hover {
     margin-top: 1.5rem;
     color: #777;
     font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+
 }
 
 @media (min-width: 900px) and (max-width: 1080px) {
